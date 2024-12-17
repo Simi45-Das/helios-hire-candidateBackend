@@ -20,6 +20,10 @@ const tagline = require("./routes/tagline");
 // const multer = require("multer"); // For file uploads
 require("dotenv").config();
 
+app.get("/health", async (req, res) => {
+  res.status(200).json({ message: "Server is in healthy state" });
+});
+
 const app = express();
 
 app.use(
